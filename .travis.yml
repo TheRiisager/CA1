@@ -6,6 +6,10 @@ dist: bionic
 
 language: java
 
+branches:
+  only:
+  - master
+
 cache:
   directories:  
     - $HOME/.m2
