@@ -31,7 +31,7 @@ public class CarResource {
 
     private static final EntityManagerFactory EMF = EMF_Creator.createEntityManagerFactory();
 
-    private static final CarFacade FACADE = CarFacade.getCarFacade(EMF);
+    private static final CarFacade FACADE = CarFacade.getFacadeExample(EMF);
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     @GET
@@ -43,9 +43,8 @@ public class CarResource {
     @Path("/all")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    public String getAll() {
-        //return Response.ok().entity(GSON.toJson(FACADE.getAllCars())).build();
-        return GSON.toJson(FACADE.getAllCars());
+    public Response getAll() {
+        return Response.ok().entity(GSON.toJson(FACADE.getAllCars())).build();
     }
 
     @Path("/{id}")

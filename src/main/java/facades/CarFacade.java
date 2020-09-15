@@ -32,9 +32,9 @@ public class CarFacade {
         return instance;
     }
 
-    public static CarFacade getCarFacade(EntityManagerFactory EMF) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    public static CarFacade getCarFacade(EntityManagerFactory EMF) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     private EntityManager getEntityManager() {
         return emf.createEntityManager();
