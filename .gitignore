@@ -6,8 +6,11 @@
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
+<<<<<<< HEAD
 **/.idea/
 
+=======
+>>>>>>> cars
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
@@ -80,7 +83,11 @@ fabric.properties
 ### Intellij Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
 
+<<<<<<< HEAD
 *.iml
+=======
+# *.iml
+>>>>>>> cars
 # modules.xml
 # .idea/misc.xml
 # *.ipr
