@@ -48,7 +48,7 @@ public class MemberFacadeTest {
         m4 = new Member("Lasse Emil Støvrin Larsen", "Peaky Blinders");
         try {
             em.getTransaction().begin();
-            em.createNamedQuery("DELETE from Member").executeUpdate();
+            em.createQuery("DELETE from Member").executeUpdate();
             em.persist(m1);
             em.persist(m2);
             em.persist(m3);
@@ -64,10 +64,10 @@ public class MemberFacadeTest {
 //        Remove any data after each test was run
     }
 
-    // TODO: Delete or change this method 
-    @Test
-    public void testAFacadeMethod() {
-        assertEquals(2, facade.getRenameMeCount(), "Expects two rows in the database");
-    }
+//    // TODO: Delete or change this method 
+//    @Test
+//    public void testAFacadeMethod() {
+//        assertEquals(4, facade.getRenameMeCount(), "Expects two rows in the database");
+//    }
 
 }
