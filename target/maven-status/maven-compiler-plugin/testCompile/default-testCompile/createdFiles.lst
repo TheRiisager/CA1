@@ -1,0 +1,4 @@
+rest\CarResourceTest.class
+facades\CarFacadeTest.class
+rest\MemberResourceTest.class
+facades\MemberFacadeTest.class
