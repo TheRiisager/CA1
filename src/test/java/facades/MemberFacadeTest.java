@@ -1,7 +1,7 @@
 package facades;
 
 import utils.EMF_Creator;
-import entities.RenameMe;
+import entities.Member;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import org.junit.jupiter.api.AfterAll;
@@ -13,18 +13,23 @@ import org.junit.jupiter.api.Test;
 
 //Uncomment the line below, to temporarily disable this test
 //@Disabled
-public class FacadeExampleTest {
+public class MemberFacadeTest {
 
     private static EntityManagerFactory emf;
-    private static FacadeExample facade;
+    private static MemberFacade facade;
+    
+    private Member m1;
+    private Member m2;
+    private Member m3;
+    private Member m4;
 
-    public FacadeExampleTest() {
+    public MemberFacadeTest() {
     }
 
     @BeforeAll
     public static void setUpClass() {
-       emf = EMF_Creator.createEntityManagerFactoryForTest();
-       facade = FacadeExample.getFacadeExample(emf);
+        emf = EMF_Creator.createEntityManagerFactoryForTest();
+        facade = MemberFacade.getFacadeExample(emf);
     }
 
     @AfterAll
@@ -37,12 +42,17 @@ public class FacadeExampleTest {
     @BeforeEach
     public void setUp() {
         EntityManager em = emf.createEntityManager();
+        m1 = new Member("Benjamin David Choleva", "The Witcher 3");
+        m2 = new Member("Frederik Riisager Johnsen", "The Exspanse");
+        m3 = new Member("Joakim Skaarup Stensnæs", "San Andreas");
+        m4 = new Member("Lasse Emil Støvrin Larsen", "Peaky Blinders");
         try {
             em.getTransaction().begin();
-            em.createNamedQuery("RenameMe.deleteAllRows").executeUpdate();
-            em.persist(new RenameMe("Some txt", "More text"));
-            em.persist(new RenameMe("aaa", "bbb"));
-
+            em.createNamedQuery("DELETE from Member").executeUpdate();
+            em.persist(m1);
+            em.persist(m2);
+            em.persist(m3);
+            em.persist(m4);
             em.getTransaction().commit();
         } finally {
             em.close();
