@@ -34,13 +34,6 @@ public class JokeResource {
     @Path("all")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    public Response getAll() {
-        return Response.ok().entity(GSON.toJson(FACADE.getAllJokes())).build();
-    }
-
-    @Path("allList")
-    @GET
-    @Produces({MediaType.APPLICATION_JSON})
     public String getAllMovies() {
         List<JokeDTO> movies = FACADE.getAllJokes();
         return new Gson().toJson(movies);

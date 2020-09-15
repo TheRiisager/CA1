@@ -51,7 +51,6 @@ public class JokeFacade {
         return JokeDTOs;
     }
 
-    //TODO getJokeByID
     //returns a JokeDTO, using the parsed ID as a parameter in MySQL
     public JokeDTO getJokeById(int id) {
         EntityManager em = emf.createEntityManager();
@@ -60,7 +59,6 @@ public class JokeFacade {
         return new JokeDTO(query.getSingleResult());
     }
 
-    //TODO getRandomJoke
     //returns a JokeDTO, using MySQL to randomize which joke, from the DB
     public JokeDTO getRandomJoke() {
         EntityManager em = emf.createEntityManager();
