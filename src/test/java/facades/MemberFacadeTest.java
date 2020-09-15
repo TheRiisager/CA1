@@ -63,11 +63,16 @@ public class MemberFacadeTest {
     public void tearDown() {
 //        Remove any data after each test was run
     }
+    
+        @Test
+    public void testGetAllMembers() {
+        assertEquals(4, facade.getAllMembers().size(), "Expects four members in the database");
+    }
 
-//    // TODO: Delete or change this method 
-//    @Test
-//    public void testAFacadeMethod() {
-//        assertEquals(4, facade.getRenameMeCount(), "Expects two rows in the database");
-//    }
+    // TODO: Delete or change this method 
+    @Test
+    public void testAFacadeMethod() {
+        assertEquals(4, facade.getMembersCount(), "Expects two rows in the database");
+    }
 
 }
