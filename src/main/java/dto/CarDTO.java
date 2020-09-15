@@ -5,11 +5,14 @@
  */
 package dto;
 
+import entities.Car;
+
 /**
  *
  * @author Lasse Emil, Benjamin Choleva
  */
 public class CarDTO {
+
     private int id;
     private int year;
     private String model;
@@ -18,6 +21,15 @@ public class CarDTO {
     private double price;
 
     public CarDTO() {
+    }
+
+    public CarDTO(Car car) {
+        this.id = car.getId();
+        this.year = car.getYear();
+        this.model = car.getModel();
+        this.make = car.getMake();
+        this.owner = car.getOwner();
+        this.price = car.getPrice();
     }
 
     public CarDTO(int year, String model, String make, String owner, double price) {
