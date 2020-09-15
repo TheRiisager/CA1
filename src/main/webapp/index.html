@@ -4,27 +4,25 @@
 <head>
     <title>Start Page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 <body>
+    <script src="memberList.js"></script>
     <h1>Group 1</h1>
     Class E
     <br>
+    <div style="width: 50%;">
     <h3>Member table</h3>
-    <table id="membertable">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Initials</th>
-            <th>Favorite TV-show</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Joakim</td>
-            <td>JKSS</td>
-            <td>Din mor</td>
+    <table id="membertable" class="table">
+        <tr id="header">
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Favorite TV-show</th>
         </tr>
     </table>
+    <button id="reload">reload list</button>
+    </div>
     <br>
     <br>
 
