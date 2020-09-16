@@ -19,7 +19,7 @@ let getJokeByID = function(event){
     event.preventDefault();
     let id = document.getElementById("input");
     
-    let result = fetch("api/jokes/all")
+    let result = fetch("api/jokes/id/" + id)
    .then(res => res.json()) //in flow1, just do it
    .then(data => {
         // Inside this callback, and only here, the response data is available
@@ -32,7 +32,7 @@ let getRandomJoke = function(){
    .then(res => res.json()) //in flow1, just do it
    .then(data => {
         // Inside this callback, and only here, the response data is available
-        document.getElementById("randomOut").innerText = data.story;
+        document.getElementById("jokeOut").innerText = data.story;
     });
 }
 

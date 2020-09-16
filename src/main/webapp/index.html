@@ -2,47 +2,54 @@
 <html>
 
 <head>
-    <title>Start Page</title>
+    <title>Home</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+    <body>
+        <script src="js/memberList.js"></script>
+        <script src="js/mlg.js"></script>
+        <audio id="mlg">
+            <source src="media/audio/hit.mp3">
+        </audio>
+        
+        
+        <div class="row container-fluid" style="margin: 0 auto;">
+            <div class="col-md-3 container"></div>
+            <div class="col-md-6 container">
+                <br>
+                <h1>Group 1</h1>
+                <h5>Class E</h5>
+                <br>
+                <div style="width: 50%;">
+                <h3>Member table</h3>
+                <table id="membertable" class="table">
+                    <tr id="header">
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Favorite TV-show</th>
+                    </tr>
+                </table>
+                <button id="reload">reload list</button>
+                </div>
+                <br>
+                <br>
 
-<body>
-    <script src="js/memberList.js"></script>
-    <script src="js/mlg.js"></script>
-    <audio id="mlg">
-        <source src="media/audio/hit.mp3">
-    </audio>
-    <h1>Group 1</h1>
-    Class E
-    <br>
-    <div style="width: 50%;">
-    <h3>Member table</h3>
-    <table id="membertable" class="table">
-        <tr id="header">
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Favorite TV-show</th>
-        </tr>
-    </table>
-    <button id="reload">reload list</button>
-    </div>
-    <br>
-    <br>
-
-    <b>Links</b>
-    <ul>
-        <a href="https://github.com/TheRiisager/CA1">Github repository</a>
-        <br>
-        <a href="https://travis-ci.org/github/TheRiisager/CA1">Travis CI</a>
-        <br>
-        <br>
-        Opgaver:
-        <ul>
-            <a href="PLACEHOLDER">Group details CHANGE ME</a>
-        </ul>
-    </ul>
-
-</body>
-
+                <h5>Links</h5>
+                <ul>
+                    <li><a href="https://github.com/TheRiisager/CA1">   Github repository   </a></li>
+                    <li><a href="https://travis-ci.org/github/TheRiisager/CA1"> Travis CI    </a></li>
+                    <li><a href="whodid.html">  Who did what? </a></li>
+                    <li><a href="feedback.html">    Our feedback on flow-1  </a></li>
+                </ul>
+                <h5>Exercises</h5>
+                <ul>
+                    <li><a href="joke.html">    Cool jokes page </a></li>
+                    <li><a href="cars.html">    Car sales page  </a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 container"></div>
+        </div>
+            
+    </body>
 </html>
