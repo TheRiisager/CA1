@@ -167,6 +167,9 @@ dist/
 nbdist/
 .nb-gradle/
 
+**/target/
+nb-configuration.xml
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
