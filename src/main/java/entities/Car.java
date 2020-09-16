@@ -23,8 +23,8 @@ public class Car implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int year;
+     private String make;
     private String model;
-    private String make;
     private String serialNumber;
     private String plate;
     private String owner;
@@ -33,7 +33,7 @@ public class Car implements Serializable {
     public Car() {
     }
 
-    public Car(int year, String model, String make, String serialNumber, String plate, String owner, double price) {
+    public Car(int year, String make, String model, String serialNumber, String plate, String owner, double price) {
         this.year = year;
         this.model = model;
         this.make = make;

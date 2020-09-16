@@ -26,13 +26,13 @@ public class CarDTO {
     public CarDTO(Car car) {
         this.id = car.getId();
         this.year = car.getYear();
-        this.model = car.getModel();
         this.make = car.getMake();
+        this.model = car.getModel();
         this.owner = car.getOwner();
         this.price = car.getPrice();
     }
 
-    public CarDTO(int year, String model, String make, String owner, double price) {
+    public CarDTO(int year, String make, String model, String owner, double price) {
         this.year = year;
         this.model = model;
         this.make = make;
