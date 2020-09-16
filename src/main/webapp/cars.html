@@ -1,0 +1,73 @@
+  <!--Author: Benjamin Choleva-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+         <link rel="stylesheet" href="css/ca1css.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/car.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+        <title>Cars</title>
+    </head>
+    <body>
+       <br><br><br><br><br>
+      
+<div class="container container-md" > 
+    <h3>Car database</h3>
+        <div id="div1">
+            <table id="carTable" class="table table-bordered table-hover">
+                       
+                <thead class="thead-dark cursor-pointer" >
+                
+                    <tr>
+                        <th onclick="sortTable2(0)" scope="col" >ID</th>
+                        <th onclick="sortTable2(1)" scope="col">YEAR</th>
+                        <th onclick="sortTable(2)"  scope="col">MAKE</th>
+                        <th onclick="sortTable(3)" scope="col">MODEL</th>
+                        <th onclick="sortTable(4)" scope="col">OWNER</th>                        
+                        <th onclick="sortTable2(5)" scope="col">PRICE</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody1">
+                </tbody>
+            </table>
+            
+            <div class="col-sm" onclick="enter()">
+                
+                
+                <input id="filterPrice"/>
+                <button onclick="filterPrice()">Price less than</button>
+            
+             
+                <input id="filterYear"/>
+                <button onclick="filterYear()">Car newer than (year)</button>
+            
+            
+                <input id="filterMake"/>
+                <button onclick="filterMake()">Make of car</button>
+ 
+            </div>
+            <br>
+            <div class="btn btn-default btn-lg col-sm-12">
+                <button  id="showAll" onclick="showAll()">Show all cars (reset)</button>
+            </div>
+            
+            
+        </div>
+    
+</div>
+
+
+        <script>
+            
+   
+        </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
