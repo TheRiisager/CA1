@@ -4,7 +4,7 @@
  */
 
 
-let header = "<tr id=\"header\"><th scope=\"col\">ID</th><th scope=\"col\">Name</th><th scope=\"col\">Favorite TV-show</th></tr>";
+let header = "<tr id=\"header\"><th scope=\"col\">ID</th><th scope=\"col\">Name</th><th scope=\"col\">Favorite TV-show/Game/etc...</th></tr>";
 
 let insertList = function(event){
     let result = fetch("api/member")
