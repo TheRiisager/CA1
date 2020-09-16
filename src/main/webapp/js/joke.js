@@ -17,7 +17,7 @@ let formatToTR = function(item){
 
 let getJokeByID = function(event){
     event.preventDefault();
-    let id = document.getElementById("input");
+    let id = document.getElementById("input").value;
     
     let result = fetch("api/jokes/id/" + id)
    .then(res => res.json()) //in flow1, just do it

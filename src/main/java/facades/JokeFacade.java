@@ -63,6 +63,7 @@ public class JokeFacade {
     public JokeDTO getRandomJoke() {
         EntityManager em = emf.createEntityManager();
         TypedQuery<Joke> query = em.createQuery("SELECT j FROM Joke j ORDER BY FUNCTION('RAND')", Joke.class);
+        query.setMaxResults(1);
         return new JokeDTO(query.getSingleResult());
     }
 }
