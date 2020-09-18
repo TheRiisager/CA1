@@ -9,10 +9,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-/**
- *
- * Rename Class to a relevant name Add add relevant facade methods
- */
 public class MemberFacade {
 
     private static MemberFacade instance;
@@ -39,7 +35,7 @@ public class MemberFacade {
         return emf.createEntityManager();
     }
 
-    //TODO Remove/Change this before use
+ 
     public long getMembersCount() {
         EntityManager em = emf.createEntityManager();
         try {

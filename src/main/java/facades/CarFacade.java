@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package facades;
 
 import dto.CarDTO;
@@ -16,7 +12,7 @@ import javax.persistence.TypedQuery;
 
 /**
  *
- * @author Lasse Emil
+ * @author Lasse Emil, Benjamin Choleva
  */
 public class CarFacade {
 
@@ -75,35 +71,29 @@ public class CarFacade {
         }
     }
 
-//    public static void main(String[] args) {
-//          EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
-//             EntityManager em = emf.createEntityManager();
-//        Car c1 = new Car(1997, "Ford", "E350", "FE852963741", "AF 12 345", "Benjamin David Choleva", 3000);
-//        Car c2 = new Car(1999, "Chevy", "Venture", "CH741852963", "CE 98 765", "Frederik Riisager Johnsen", 4900);
-//        Car c3 = new Car(2000, "Chevy", "Venture", "CH123456789", "CE 14 253", "Benjamin David Choleva", 5000);
-//        Car c4 = new Car(1996, "Jeep", "Grand Cherokee", "GC159487263", "CG 26 351", "Lasse Emil Støvring Larsen", 4799);
-//        Car c5 = new Car(1997, "Volvo", "V70", "VO623519478", "VO 94 963", "Joakim Skaarup Stensnæs", 44799);
-//        try {
-//            em.getTransaction().begin();
-//            em.createQuery("DELETE from Car").executeUpdate();
-//            em.persist(c1);
-//            em.persist(c2);
-//            em.persist(c3);
-//            em.persist(c4);
-//            em.persist(c5);
-//            em.getTransaction().commit();
-//        } finally {
-//            em.close();
-//        }
-//        
-//        
-//    }
-    
-    
-    
-    
-    
-    
-    
+    public static void main(String[] args) {
+          EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
+             EntityManager em = emf.createEntityManager();
+        Car c1 = new Car(1997, "Ford", "E350", "FE852963741", "AF 12 345", "Benjamin David Choleva", 3000);
+        Car c2 = new Car(1999, "Chevy", "Venture", "CH741852963", "CE 98 765", "Frederik Riisager Johnsen", 4900);
+        Car c3 = new Car(2000, "Chevy", "Venture", "CH123456789", "CE 14 253", "Benjamin David Choleva", 5000);
+        Car c4 = new Car(1996, "Jeep", "Grand Cherokee", "GC159487263", "CG 26 351", "Lasse Emil Støvring Larsen", 4799);
+        Car c5 = new Car(1997, "Volvo", "V70", "VO623519478", "VO 94 963", "Joakim Skaarup Stensnæs", 44799);
+        try {
+            em.getTransaction().begin();
+            em.createQuery("DELETE from Car").executeUpdate();
+            em.persist(c1);
+            em.persist(c2);
+            em.persist(c3);
+            em.persist(c4);
+            em.persist(c5);
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
+        
+        
+    }
+
     
 }
