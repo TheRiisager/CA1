@@ -23,7 +23,12 @@ let getJokeByID = function(event){
    .then(res => res.json()) //in flow1, just do it
    .then(data => {
         // Inside this callback, and only here, the response data is available
-        document.getElementById("jokeOut").innerText = data.story;
+       if(data.type == "meme image"){
+            document.getElementById("jokeOut").innerHTML = "<img src=\"media/images/meme/" + data.story + ".jpg\">"
+       } else {
+           document.getElementById("jokeOut").innerHTML = "<p>" + data.story + "</p>";
+       }
+
     });
 };
 
@@ -32,7 +37,11 @@ let getRandomJoke = function(){
    .then(res => res.json()) //in flow1, just do it
    .then(data => {
         // Inside this callback, and only here, the response data is available
-        document.getElementById("jokeOut").innerText = data.story;
+       if(data.type == "meme image"){
+           document.getElementById("jokeOut").innerHTML = "<img src=\"media/images/meme/" + data.story + ".jpg\">"
+       } else {
+           document.getElementById("jokeOut").innerHTML = "<p>" + data.story + "</p>";
+       }
     });
 }
 
